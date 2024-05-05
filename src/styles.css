@@ -8,8 +8,8 @@
 }
 
 :root {
-  --background-color1: rgb(20, 20, 30);
-  --background-color2: rgb(30, 30, 40);
+  --background-color1: rgb(20, 20, 30); /*rgb default: (20, 20, 30)*/
+  --background-color2: rgb(30, 30, 40); /*rgb default: (30, 30, 40)*/
   --widget-light-color: rgba(255, 255, 255, 0.035);
   --widget-lighter-color: rgba(255, 255, 255, 0.05);
   --widget-very-light-color: rgba(255, 255, 255, 0.08);
@@ -25,7 +25,7 @@
 }
 
 body {
-  background: linear-gradient(100deg, var(--background-color1), var(--background-color2));
+  background: linear-gradient(100deg, var(--background-color1), var(--background-color2)); /*default: 100deg*/
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -46,10 +46,23 @@ body::-webkit-scrollbar {
   padding-left: 20px;
   margin: 5px;
 
+  display: flex;
+
   font-family: var(--panton-font);
   font-weight: 500;
   font-size: 25px;
   color: var(--font-color-active);
+}
+
+.logo p {
+  margin: 0;
+  padding: 10px;
+}
+
+.logo img {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
 }
 
 .top {
@@ -136,6 +149,10 @@ body::-webkit-scrollbar {
   color: var(--font-color-inactive);
 }
 
+.console_div::-webkit-scrollbar {
+  display: none;
+}
+
 .profiles {
   width: 100%;
   margin: 0;
@@ -182,6 +199,7 @@ body::-webkit-scrollbar {
 .preview {
   width: 100%;
   height: 150px;
+  position: relative;
 
   color: var(--font-color-inactive);
 
@@ -189,13 +207,51 @@ body::-webkit-scrollbar {
   border-radius: 10px;
 }
 
+.presets_chooser {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+  visibility: hidden;
+  background-color: var(--widget-very-light-color);
+  border-radius: 10px;
+}
+
+.presets_chooser::-webkit-scrollbar {
+  display: none;
+}
+
+#presets_back_button {
+  width: 60px;
+  margin-left: calc(100% - 70px);
+}
+
+.presets button {
+  background-color: none;
+  border: none;
+}
+
+.presets img {
+  width: 16px;
+  height: 16px;
+}
+
 .preview p {
   padding-left: 10px;
-  margin-bottom: 10px;
+  margin-bottom: -25px;
 
   font-family: var(--panton-font);
   font-size: 16px;
   color: var(--font-color-active);
+}
+
+#presets {
+  width: 80px;
+  margin-left: calc(100% - 90px);
+  margin-bottom: 7px;
 }
 
 .preview input {

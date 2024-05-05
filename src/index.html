@@ -15,6 +15,7 @@
   <body>
 
     <div class="logo">
+      <img src="assets/logo.png">
       <p>MINECRAFT PLAYTIME CALCULATOR</p>
     </div>
 
@@ -39,7 +40,20 @@
       </div>
 
       <div class="preview" id="preview">
-        <p>NEW PROFILE</p>
+        <div class="presets_chooser">
+          <p>PRESETS</p>
+          <button id="presets_back_button">BACK</button>
+          <div class="presets">
+            <button id="preset_vanilla"><img src="assets/vanilla.webp"> Vanilla</button>
+            <button id="preset_lunar"><img src="assets/lunar.webp"> Lunar Client</button>
+            <button id="preset_badlion"><img src="assets/badlion.png"> Badlion Client</button>
+            <button id="preset_feather"><img src="assets/feather.png"> Feather Client</button>
+            <button id="preset_prism"><img src="assets/prism.png"> Prism Launcher</button>
+            <button id="preset_multimc"><img src="assets/multimc.png"> MultiMC Launcher</button>
+          </div>
+        </div>
+        <p>ADD CLIENT</p>
+        <button id="presets">PRESET</button>
         <input type="text" id="profilename" placeholder="NAME">
         <input type="text" id="profilepath" placeholder="PATH">
         <button id="newprofile">CREATE</button>

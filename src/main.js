@@ -1,11 +1,17 @@
 const calculate_button = document.getElementById("calculate");
+
 const consoleDiv = document.getElementById("console_div");
+
 const previewDiv = document.getElementById("preview");
+const profilePresetsButton = document.getElementById("presets");
 const profileName = document.getElementById("profilename");
 const profilePath = document.getElementById("profilepath");
 const profileButton = document.getElementById("newprofile");
 const profilePreset = document.querySelector(".profile");
 const grid = document.getElementById("profiles");
+
+const presets = document.querySelector(".presets_chooser");
+const presetsBackButton = document.getElementById("presets_back_button");
 
 let colCount = 1;
 
@@ -50,3 +56,13 @@ profileButton.addEventListener("click", () => {
   grid.appendChild(previewDiv);
 
 });
+
+profilePresetsButton.addEventListener("click", () => {
+  presets.style.visibility = "visible";
+  previewDiv.style.visibility = "hidden";
+});
+
+presetsBackButton.addEventListener("click", () => {
+  presets.style.visibility = "hidden";
+  previewDiv.style.visibility = "visible";
+})
