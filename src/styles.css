@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "PantonBlack";
+  src: url("/assets/panton/Panton-Trial-Black.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color1: rgb(20, 20, 30);
+  --background-color2: rgb(30, 30, 40);
+  --widget-light-color: rgba(255, 255, 255, 0.035);
+  --widget-lighter-color: rgba(255, 255, 255, 0.05);
+  --widget-very-light-color: rgba(255, 255, 255, 0.08);
+  --widget-very-light-color-active: rgba(255, 255, 255, 0.11);
+
+  --font-color-placeholder: rgb(195, 195, 195);
+  --font-color-inactive: rgb(220, 220, 220);
+  --font-color-active: rgb(255, 255, 255);
+
+  --helvetica-font: "Helvetica", sans-serif;
+  --roboto-font: "Roboto", sans-serif;
+  --panton-font: "PantonBlack", sans-serif;
+}
+
+body {
+  background: linear-gradient(100deg, var(--background-color1), var(--background-color2));
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.logo {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 30px;
+  padding-left: 20px;
+  margin: 5px;
+
+  font-family: var(--panton-font);
+  font-weight: 500;
+  font-size: 25px;
+  color: var(--font-color-active);
+}
+
+.top {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 350px;
+  margin: 0;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  column-gap: 20px;
+}
+
+.settings {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  padding: 0;
+  margin: 0;
+
+  background: var(--widget-light-color);
+  border-radius: 10px;
+}
+
+.settings p {
+  padding-left: 10px;
+
+  font-family: var(--panton-font);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--font-color-active);
+}
+
+.calculate {
+  margin-left: 5%;
+  width: 90%;
+  height: 50px;
+
+  background: var(--widget-light-color);
+  border: none;
+  border-radius: 10px;
+
+  font-family: var(--panton-font);
+  font-size: 17px;
+  color: var(--font-color-inactive);
+}
+
+.console {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  padding: 0;
+  margin: 0;
+
+  background: var(--widget-light-color);
+  border-radius: 10px;
+}
+
+.console p {
+  padding-left: 10px;
+
+  font-family: var(--panton-font);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--font-color-active);
+}
+
+.console_div {
+  width: 100%;
+  height: 230px;
+  overflow-y: auto;
+  padding-left: 10px;
+
+  user-select: none;
+
+  font-family: var(--roboto-font);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--font-color-inactive);
+}
+
+.profiles {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.overall {
+  width: 100%;
+  height: 150px;
+  
+  background-color: var(--widget-light-color);
+  border-radius: 10px;
+}
+
+.overall p {
+  padding-left: 10px;
+
+  font-family: var(--panton-font);
+  color: var(--font-color-active);
+}
+
+.profile {
+  width: 100%;
+  height: 150px;
+  
+  background-color: var(--widget-light-color);
+  border-radius: 10px;
+}
+
+.profile p {
+  padding-left: 10px;
+
+  font-family: var(--panton-font);
+  font-size: 16px;
+  color: var(--font-color-active);
+}
+
+.preview {
+  width: 100%;
+  height: 150px;
+
+  color: var(--font-color-inactive);
+
+  background-color: var(--widget-very-light-color);
+  border-radius: 10px;
+}
+
+.preview p {
+  padding-left: 10px;
+  margin-bottom: 10px;
+
+  font-family: var(--panton-font);
+  font-size: 16px;
+  color: var(--font-color-active);
+}
+
+.preview input {
+  width: calc(100% - 20px);
+  height: 25px;
+  margin-top: -10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+
+  background: var(--widget-light-color);
+  border-radius: 10px;
+  border: none;
+
+  font-family: var(--roboto-font);
+  color: var(--font-color-placeholder);
+}
+
+.preview input::placeholder {
+  font-family: var(--roboto-font);
+  color: var(--font-color-placeholder);
+}
+
+.preview input:focus {
+  outline: none;
+
+  font-family: var(--roboto-font);
+  color: var(--font-color-inactive);
+}
+
+.preview button {
+  width: calc(100% - 20px);
+  height: 30px;
+  margin-left: 10px;
+
+  background-color: var(--widget-light-color);
+  border-radius: 10px;
+  border: none;
+
+  font-family: var(--panton-font);
+  font-size: 16px;
+  color: var(--font-color-inactive);
+}
+
+.preview button:hover {
+  background-color: var(--widget-very-light-color-active);
+  color: var(--font-color-active);
+  cursor: pointer;
+}

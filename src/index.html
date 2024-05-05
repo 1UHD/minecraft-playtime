@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js" type="text/javascript" defer></script>
+    <title>Tauri App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="logo">
+      <p>MINECRAFT PLAYTIME CALCULATOR</p>
+    </div>
+
+    <div class="top">
+
+      <div class="settings">
+        <p>CONTROLS:</p>
+        <button class="calculate" id="calculate">CALCULATE</button>
+      </div>
+
+      <div class="console">
+        <p>CONSOLE:</p>
+        <div class="console_div" id="console_div"></div>
+      </div>
+
+    </div>
+
+    <div class="profiles" id="profiles">
+
+      <div class="overall">
+        <p>OVERALL</p>
+      </div>
+
+      <div class="preview" id="preview">
+        <p>NEW PROFILE</p>
+        <input type="text" id="profilename" placeholder="NAME">
+        <input type="text" id="profilepath" placeholder="PATH">
+        <button id="newprofile">CREATE</button>
+      </div>
+
+    </div>
+  </body>
